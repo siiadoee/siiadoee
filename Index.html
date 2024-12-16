@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MHKL</title>
+<script src='//niphaumeenses.net/vignette.min.js' data-zone='8551232' data-sdk='show_8551232'></script>
+    <style>
+        /* General styling */
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #000000, #1a1a1a);
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            text-align: center;
+        }    
+
+        /* Container styling */
+        .app-container {
+            background: #1a1a1a;
+            border-radius: 20px;
+            box-shadow: epx 1epx 3epx rgba(255, 165, 0, 0.5);
+            padding: 30px 20px;
+            width: 350px;
+            border: 2px solid #ff8c00;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #ff8c00;
+            font-size: 24px;
+            letter-spacing: 1px;
+        }    
+
+        .developer-label {
+            margin-bottom: 30px;
+            display: inline-block;
+            padding: 10px 20px;
+            background: #ff4500;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 14px;
+        }    
+
+        /* Buttons */
+        .button {
+            display: block;
+            margin: 15px auto;
+            padding: 14px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background: linear-gradient(145deg, #ff7e00, #ff4500);
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            box-shadow: opx 6px 20px rgba(255, 165, 0, 0.6);
+        }
+
+        .button:hover {
+            transform: translateY(-4px) scale(1.05);
+            background: linear-gradient(145deg, #ff5e00, #ff7e00);
+            box-shadow: epx 10px 25px rgba(255, 165, 0, 0.8);
+        }    
+
+        .button:active {
+            transform: scale(0.98);
+        }    
+
+        /* Footer Design */
+        .footer {
+            margin-top: 20px;
+            color: #fff;
+            font-size: 14px;
+        }    
+
+        .footer a {
+            color: #ffa500;
+            text-decoration: none;
+            font-weight: bold;
+        }    
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Toast Notification */
+        #toast {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translatex(-50%);
+            background: rgba(255, 69, 0, 0.8);
+            color: #fff;
+            padding: 12px 20px;
+            font-size: 14px;
+            border-radius: 10px;
+            animation: fadernout 3s ease forwards;
+        }    
+
+        @keyframes fadeInout {
+            0% { opacity: 0; }
+            20%, 80% { opacity: 1; }
+            100% { opacity: 0; }
+        }    
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <h2>GET MONEY</h2>
+        <div class="developer-label">Developed by <a href="https://monkeyhundredsarmed.com/xkg0m0gnv?key=5b03109efef960bbc0d33e49a37c19b1" target="_blank" style="color:#fff;">Get Money</a></div>
+
+        <l-- stats -->
+        <div class="stats">
+            <p id="ads-watched">Watched Ads: 0</p>
+            <p id="points-earned">Earned Points: 0</p>
+        </div>
+
+        <!-- Buttons -->
+        <button class="button" onclick="https://luglawhaulsano.net/4/8594102">Watch Ads</button>
+        <button class="button" onclick="autoAds()">Auto Show Ads</button>
+        <button class="button" onclick="stopAutoAds()">Stop Auto Ads</button>
+    </div>
+
+
+
+    <div id="toast"></div>
+
+    <script>
+        let adswatched =0;
+        let points =0;
+        const pointsPerAd = 10;
+        let autoAdsinterval;
+
+        function watchAd() {
+            if (typeof show_8551232 === 'function') {
+                show_8551232().then(() => {
+                    adsWatched++;
+                    points += pointsPerAd;
+
+                    document.getElementById('ads-watched').innerText = `Ads Watched: ${adsWatched}`;
+                    document.getElementById('points-earned').innerText = `Points Earned: ${points}`;
+                    showToast('Ad watched successfully! Points earned.');
+                }).catch(() => showToast('Ad failed to load.'));
+            }    
+        }   
+
+        function autoAds() {
+            autoAdsInterval= setInterval(watchAd, 2000);
+        }
+
+        function stopAutoAds() {
+            clearInterval(autoAdsInterval);
+            showToast('Auto Ads Stopped');
+        }    
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.innerText = message;
+            toast.style.display = 'block';
+            setTimeout(()=> {
+                toast.style.display = 'none';
+            }, 3000);
+        }        
+    </script>
+</body>
+</html>
